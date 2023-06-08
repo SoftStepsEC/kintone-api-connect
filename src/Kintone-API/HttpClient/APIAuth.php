@@ -69,7 +69,7 @@ class APIAuth
         if ($this->doQueryString) {
             $this->parameters['api_token']    = $this->api_token;
         } else {
-            \curl_setopt($this->ch, CURLOPT_HTTPHEADER, 'X-Cybozu-API-Token'.$this->api_token);
+            \curl_setopt($this->ch, CURLOPT_HTTPHEADER, array('X-Cybozu-API-Token: '.$this->api_token, 'Content-Type: application/json'));
         }
     }
 

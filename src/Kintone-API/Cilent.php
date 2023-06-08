@@ -33,7 +33,7 @@ class Client
     /**
      * Initialize client.
      *
-     * @param string $host       kintone Host.
+     * @param string $host      kintone Host.
      * @param string $aap_id    APP ID.
      * @param string $api_token API token.
      * @param array  $options   Options.php (version, timeout, verify_ssl, oauth_only).
