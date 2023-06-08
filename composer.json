@@ -1,0 +1,27 @@
+{
+  "name": "ssec/kintone-api-connect",
+  "description": "A PHP wrapper for the Kintone REST API",
+  "type": "library",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Shohei Tanaka",
+      "email": "shoheit@ssec.shop"
+    }
+  ],
+  "minimum-stability": "dev",
+  "keywords": [
+    "kintone",
+    "API"
+  ],
+  "require": {
+    "php": ">=8.0",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "SoftSteps\\KintoneAPI\\": ["src/Kintone-API"]
+    }
+  }
+}
