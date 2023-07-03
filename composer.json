@@ -28,7 +28,7 @@
     "psr-4": {
       "SoftSteps\\KintoneAPI\\": ["src/Kintone-API"]
     }
-  }
+  },
   "autoload-dev": {
     "psr-4": {}
   }
