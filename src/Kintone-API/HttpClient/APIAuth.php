@@ -18,7 +18,7 @@ class APIAuth
     /**
      * cURL handle.
      *
-     * @var resource
+     * @var object
      */
     protected $ch;
 
