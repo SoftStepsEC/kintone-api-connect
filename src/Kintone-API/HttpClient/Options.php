@@ -115,13 +115,13 @@ class Options
     }
 
     /**
-     * Custom API Prefix for KINTONE_GUEST_API.
+     * Custom API Prefix for WP API.
      *
      * @return string
      */
     public function apiPrefix()
     {
-        if(isset($this->options['guest_space_id'])){
+        if($this->options['guest_space_id']){
             $api = self::KINTONE_GUEST_API_PREFIX.'$this->options["guest_space_id"]'.'/';
         }else{
             $api = $this->options['kintone_api_prefix'] ?? self::KINTONE_API_PREFIX;

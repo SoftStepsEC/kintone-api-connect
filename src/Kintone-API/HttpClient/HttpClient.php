@@ -26,7 +26,7 @@ class HttpClient
     /**
      * cURL handle.
      *
-     * @var object CurlHandle
+     * @var resource
      */
     protected $ch;
 
@@ -42,7 +42,7 @@ class HttpClient
      *
      * @var string
      */
-    protected $app_id;
+    protected $aap_id;
 
     /**
      * API token.
@@ -90,11 +90,11 @@ class HttpClient
      * Initialize HTTP client.
      *
      * @param string $host kintone Host.
-     * @param string $app_id APP ID.
+     * @param string $aap_id APP ID.
      * @param string $api_token API token.
      * @param array $options Client options.
      */
-    public function __construct($host, $app_id, $api_token, $options)
+    public function __construct($host, $aap_id, $api_token, $options)
     {
         if (!\function_exists('curl_version')) {
             throw new HttpClientException('cURL is NOT installed on this server', -1, new Request(), new Response());
@@ -102,7 +102,7 @@ class HttpClient
 
         $this->options = new Options($options);
         $this->host = $this->buildApiUrl($host);
-        $this->app_id = $app_id;
+        $this->aap_id = $aap_id;
         $this->api_token = $api_token;
     }
 
@@ -359,7 +359,7 @@ class HttpClient
     /**
      * Look for errors in the request.
      *
-     * @param object $parsedResponse Parsed body response.
+     * @param array $parsedResponse Parsed body response.
      */
     protected function lookForErrors($parsedResponse)
     {
